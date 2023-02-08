@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+const debug = require('debug')('meta-pnpm-oudated')
+const metaLoop = require('meta-loop')
+
+if (process.argv[2] === '--help') {
+    return console.log(`\n  usage:\n\n    meta pnpm outdated\n`)
+}
+
+metaLoop('pnpm outdated')

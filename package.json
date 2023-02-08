@@ -1,0 +1,66 @@
+{
+    "name": "meta-pnpm",
+    "version": "0.0.0-development",
+    "description": "pnpm plugin for meta",
+    "main": "index.js",
+    "bin": {
+        "meta-pnpm": "./bin/meta-pnpm",
+        "meta-pnpm-clean": "./bin/meta-pnpm-clean",
+        "meta-pnpm-install": "./bin/meta-pnpm-install",
+        "meta-pnpm-link": "./bin/meta-pnpm-link",
+        "meta-pnpm-outdated": "./bin/meta-pnpm-outdated",
+        "meta-pnpm-publish": "./bin/meta-pnpm-publish",
+        "meta-pnpm-run": "./bin/meta-pnpm-run",
+        "meta-pnpm-symlink": "./bin/meta-pnpm-symlink"
+    },
+    "scripts": {
+        "commit": "git-cz",
+        "lint": "prettier --write \"bin/*\" index.js",
+        "test": "jest --config jest.json --coverage",
+        "test:coverage": "jest --config jest.json --coverage",
+        "test:watch": "jest --config jest.json --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wongchichong/meta-pnpm.git"
+    },
+    "keywords": [
+        "pnpm",
+        "meta",
+        "repo",
+        "repository",
+        "metarepository",
+        "metarepo"
+    ],
+    "author": "wongchichong@gmail.com",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/mateodelnorte/meta/issues"
+    },
+    "homepage": "https://github.com/mateodelnorte/meta-pnpm#readme",
+    "dependencies": {
+        "async": "^3.2.0",
+        "chalk": "^3.0.0",
+        "commander": "^2.20.3",
+        "debug": "^4.3.2",
+        "find-module-bin": "^1.1.0",
+        "get-meta-file": "^1.3.4",
+        "lodash": "^4.17.21",
+        "loop": "^3.3.4",
+        "meta-exec": "^1.4.2",
+        "meta-loop": "^1.2.2",
+        "symlink-meta-dependencies": "^1.2.3"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "12.1.4",
+        "@commitlint/config-conventional": "12.1.4",
+        "commitizen": "4.2.4",
+        "cz-conventional-changelog": "3.3.0",
+        "husky": "6.0.0",
+        "jest": "26.6.3",
+        "mocha": "6.2.3",
+        "prettier": "2.5.1",
+        "pretty-quick": "3.1.3",
+        "should": "13.2.3"
+    }
+}

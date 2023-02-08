@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+const debug = require('debug')('meta-pnpm-publish')
+const metaLoop = require('meta-loop')
+
+if (process.argv[2] === '--help') {
+    return console.log(`\n  usage:\n\n    meta pnpm publish\n`)
+}
+
+metaLoop('pnpm publish')

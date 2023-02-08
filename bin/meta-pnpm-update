@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+const debug = require('debug')('meta-pnpm-install')
+const fs = require('fs')
+const metaLoop = require('meta-loop')
+const path = require('path')
+
+if (process.argv[2] === '--help') {
+    return console.log(`\n  usage:\n\n    meta pnpm update\n`)
+}
+
+metaLoop('pnpm update', {
+    test: (folder) => {
+        return fs.existsSync(path.join(process.cwd(), folder, 'package.json')) === true
+    },
+})

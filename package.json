@@ -1,6 +1,6 @@
 {
-    "name": "meta-pnpm",
-    "version": "0.0.0-development",
+    "name": "meta-performant-npm",
+    "version": "1.0.0",
     "description": "pnpm plugin for meta",
     "main": "index.js",
     "bin": {
